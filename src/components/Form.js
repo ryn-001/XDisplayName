@@ -36,7 +36,7 @@ export default function Form(){
                 <label htmlfor="lname">Last Name: </label>
                 <input required type="text" name="lname" id="lname" onChange={handleChange}/> <br/>
 
-                <button type="submit" name="submit" id="submit"/> <br/>
+                <button type="submit" name="submit" id="submit">Submit</button> <br/>
             </form>
 
             <div className="display-name">{
