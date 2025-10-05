@@ -40,7 +40,11 @@ export default function Form() {
             </form>
 
 
-            (name.submittedFName !== "" && name.submittedLName !== "") ? (`Full Name: ${name.submittedFName} ${name.submittedLName}`) : (``)
+            <span>
+                {name.submittedFName && name.submittedLName
+                    ? `Full Name: ${name.submittedFName} ${name.submittedLName}`
+                    : ""}
+            </span>
         </div>
     )
 } 
