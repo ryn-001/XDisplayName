@@ -1,7 +1,7 @@
-import {useState} from "react"
+import { useState } from "react"
 
-export default function Form(){
-    const [name,setName] = useState({
+export default function Form() {
+    const [name, setName] = useState({
         fname: "",
         lname: "",
         submittedFName: "",
@@ -11,7 +11,7 @@ export default function Form(){
     const handleChange = (e) => {
         setName({
             ...name,
-            [e.target.name] : e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -20,28 +20,27 @@ export default function Form(){
 
         setName({
             ...name,
-            submittedFName : name.fname,
-            submittedLName : name.lname,
+            submittedFName: name.fname,
+            submittedLName: name.lname,
         })
     }
 
-    return(
+    return (
         <div>
             <h1>Full Name Display</h1>
 
             <form onSubmit={handleSubmit} id="myForm">
                 <label htmlFor="fname">First Name: </label>
-                <input required type="text" name="fname" id="fname" onChange={handleChange}/> <br/>
+                <input required type="text" name="fname" id="fname" onChange={handleChange} /> <br />
 
                 <label htmlFor="lname">Last Name: </label>
-                <input required type="text" name="lname" id="lname" onChange={handleChange}/> <br/>
+                <input required type="text" name="lname" id="lname" onChange={handleChange} /> <br />
 
                 <button type="submit">Submit</button>
             </form>
 
-            <div>{
-                (name.submittedFName !== "" && name.submittedLName !== "") ? (`Full Name: ${name.submittedFName} ${name.submittedLName}`) : (``)     
-            }</div>
+
+            (name.submittedFName !== "" && name.submittedLName !== "") ? (`Full Name: ${name.submittedFName} ${name.submittedLName}`) : (``)
         </div>
     )
 } 
