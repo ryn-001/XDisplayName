@@ -30,10 +30,10 @@ export default function Form(){
             <h1>Full Name Display</h1>
 
             <form onSubmit={handleSubmit}>
-                <label htmlfor="fname">First Name: </label>
+                <label htmlFor="fname">First Name: </label>
                 <input required type="text" name="fname" id="fname" onChange={handleChange}/> <br/>
 
-                <label htmlfor="lname">Last Name: </label>
+                <label htmlFor="lname">Last Name: </label>
                 <input required type="text" name="lname" id="lname" onChange={handleChange}/> <br/>
 
                 <button type="submit" name="submit" id="submit">Submit</button> <br/>
