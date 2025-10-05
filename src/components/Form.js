@@ -39,7 +39,7 @@ export default function Form(){
                 <button type="submit">Submit</button>
             </form>
 
-            <div className="display-name">{
+            <div>{
                 (name.submittedFName !== "" && name.submittedLName !== "") ? (`Full Name: ${name.submittedFName} ${name.submittedLName}`) : (``)     
             }</div>
         </div>
