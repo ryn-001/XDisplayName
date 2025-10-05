@@ -35,9 +35,9 @@ export default function Form(){
 
                 <label htmlFor="lname">Last Name: </label>
                 <input required type="text" name="lname" id="lname" onChange={handleChange}/> <br/>
-            </form>
 
-            <button type="submit" form="myForm">Submit</button> <br/>
+                <button type="submit">Submit</button>
+            </form>
 
             <div className="display-name">{
                 (name.submittedFName !== "" && name.submittedLName !== "") ? (`Full Name: ${name.submittedFName} ${name.submittedLName}`) : (``)     
